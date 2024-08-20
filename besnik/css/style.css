@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Reuse Classes */
+
+.btn{
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.btn-secondary{
+    background-color: rgba(255, 250, 249, 0.2);
+}
+.btn-primary{
+    background-color: #231A36;
+    color: #ffffff;
+}
+
+
+.container{
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+main{
+    background: url("../img/banner/bg.png") no-repeat center;
+    /* background-repeat: no-repeat; */
+      /* background-position: center; */
+    background-size: cover;
+  
+}
+
+header{
+    padding: 10px 0px;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper a{
+    color: #ffffff;
+}
+
+.header-wrapper nav{
+    display: flex;
+    gap: 25px;
+}
+
+
+/* Banner Start */
+
+.banner{
+    padding: 100px 0px;
+    color: #ffffff;
+}
+
+.banner-wrapper{
+  text-align: center;
+}
+
+.banner-wrapper h1{
+    font-size: 50px;
+ }
+
+.banner-wrapper p{
+   margin: 30px 0px 50px 0px;
+} 
+
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+   
+    .banner-wrapper h1{
+        font-size: 94px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+   
+    .text-break{
+        display: block;
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+   .header-wrapper nav{
+    display: none;
+   }
+}
