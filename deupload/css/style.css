@@ -1,0 +1,51 @@
+:root{
+    --primary-color:#651FFF;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+
+/* Default */
+a{
+    text-decoration: none;
+}
+
+/* Reuse class */
+
+.text-primary-color{
+    color: var(--primary-color);
+}
+
+.banner{
+    padding: 100px 0px;
+    background-color: #EBE5FA;
+}
+
+/* big-image */
+.big-image{
+    padding: 60px 0px;
+}
+
+/* lightning */
+
+.lightning{
+    padding: 100px 0px;
+}
+
+.lighting-wrraper>div>div>div{
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.lightning a{
+    color: #ffffff;
+}
