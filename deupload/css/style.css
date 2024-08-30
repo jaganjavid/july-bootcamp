@@ -17,6 +17,11 @@ a{
     text-decoration: none;
 }
 
+ul{
+    padding: 0px;
+    list-style: none;
+}
+
 /* Reuse class */
 
 .text-primary-color{
@@ -49,3 +54,84 @@ a{
 .lightning a{
     color: #ffffff;
 }
+
+/* lightweight */
+.lightweight{
+    padding: 100px 0px;
+}
+
+.lightweight-wrappper > div > div > div{
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.lightweight-wrappper > div > div:nth-child(1) > div{
+    background-color: #FFF7ED;
+}
+
+.lightweight-wrappper > div > div:nth-child(2) > div{
+    background-color: #E0F7FA;
+}
+
+.lightweight-wrappper-2{
+    padding: 50px;
+    background-color: #ECECFE;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+/* pricing */
+
+.pricing{
+    padding: 100px 0px;
+    background: linear-gradient(#00E5FF 55%,#ffffff 45%);
+}
+
+
+.pricing-wrapper ul{
+   display: inline-block;
+}
+
+.pricing-wrapper ul li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pricing-wrapper > div > div:nth-child(1) > div{
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 24px 0px rgba(186, 186, 186, 0.2);
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div{
+    background-color: #651FFF;
+    color: #ffffff;
+    padding: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(1){
+    color: #651FFF;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+.pricing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(2){
+    color: #22D3EE;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .pricing-wrapper > div > div:nth-child(2) > div{
+        border-radius: 25px;
+    }
+  }
