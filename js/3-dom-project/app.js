@@ -203,3 +203,10 @@ const arr = [1,2,3];
 // let stringToArr = JSON.parse(arrToString);
 
 // console.log(stringToArr);
+
+
+// let greet;
+
+// greet.forEach(function(x){
+//     console.log(x);
+// })
