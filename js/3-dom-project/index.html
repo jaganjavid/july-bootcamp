@@ -17,6 +17,13 @@
         .add-color{
             background-color: green;
         }
+        .delete-item i{
+            color: red;
+        }
+
+        .edit-item i {
+            color: rgb(255, 153, 0);
+        }
     </style>
 
    
@@ -35,7 +42,7 @@
                         <div class="row">
                             <form id="task-form">
                                 <div class="input-field col s12">
-                                    <input type="text" name="task" id="task" value="test">
+                                    <input type="text" name="task" id="task">
                                     <label for="task">New Task</label>
                                 </div>
                                 <input type="submit" value="Add Task" class="btn purple">
@@ -53,32 +60,11 @@
                                 <a href="#" class="delete-item secondary-content" title="im Link">
                                     <i class="fa fa-remove"></i>
                                 </a>
-                            </li><!-- Hey im comment node -->
-                            <li class="collection-item">
-                                List Item 2
-                                <a href="#" class="delete-item secondary-content">
-                                    <i class="fa fa-remove"></i>
+                                <a href="#" class="edit-item secondary-content" title="im Link">
+                                    <i class="fa fa-edit"></i>
                                 </a>
                             </li>
-                            <li class="collection-item">
-                                List Item 3
-                                <a href="#" class="delete-item secondary-content">
-                                    <i class="fa fa-remove"></i>
-                                </a>
-                            </li>
-                            <li class="collection-item">
-                                List Item 4
-                                <a href="#" class="delete-item secondary-content">
-                                    <i class="fa fa-remove"></i>
-                                </a>
-                            </li>
-                            <li class="collection-item">
-                                List Item 5
-                                <a href="#" class="delete-item secondary-content">
-                                    <i class="fa fa-remove"></i>
-                                </a>
-                            </li>
-
+                            
                         </ul>
                         <a class="clear-tasks btn black" id="clear-btn" href="#">Clear Tasks</a>
                     </div>
