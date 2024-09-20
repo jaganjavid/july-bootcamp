@@ -1,0 +1,65 @@
+
+
+import React from 'react'
+
+const App = () => {
+
+  const title = "My App";
+  const body = "This is my first post";
+
+  const users = [
+    {id:1, text:"Comment One"},
+    {id:2, text:"Comment Two"},
+    {id:3, text:"Comment Three"},
+  ]
+
+  const loading = false;
+
+
+
+
+
+
+
+
+  const showUser = true;
+  
+  if(loading) return <h1>Loading...</h1>
+
+
+  const usersList = users.map((user) => (
+    <li key={user.id}>{user.text}</li>
+  ))
+
+
+  return (
+     <div className='container'>
+        <h1>{title.toUpperCase()}</h1>
+        <p>{body}</p>
+        <h2>{5 + 5}</h2>
+
+
+        <div className='users'>
+
+
+          <h3>({users.length})</h3>
+
+          <h4>( {showUser ? "yes" : "no"} )</h4>
+
+          <ul>
+            {
+             showUser && usersList
+            }
+          </ul>
+        </div>
+
+
+        
+     </div>
+  )
+}
+
+export default App
+
+
+
