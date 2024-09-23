@@ -1,6 +1,6 @@
 
 
-const Header = ({title = "Review App", bgColor = "blue", textColor = "white"}) => {
+const Header = ({title = "Review App", bgColor = "rgb(38 163 152 / 20%)", textColor = "white"}) => {
 
 
   const headerStyle = {
