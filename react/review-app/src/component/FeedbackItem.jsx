@@ -3,12 +3,13 @@
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Card from "./shared/Card";
+import { useContext } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 
 
+const FeedbackItem = ({item}) => {
 
-const FeedbackItem = ({item,handleDelete}) => {
-
-
+  const {deleteFeedback} = useContext(FeedbackContext);
   
 
   return (
@@ -17,7 +18,7 @@ const FeedbackItem = ({item,handleDelete}) => {
     <h4>{item.text}</h4>
     
     <FaEdit className="edit" size="20px" color="#b16e0e"/>
-    <MdDelete onClick={() => handleDelete(item.id)} className="delete" size="20px" color="#b80d0d"/>
+    <MdDelete onClick={() => deleteFeedback(item.id)} className="delete" size="20px" color="#b80d0d"/>
 
 
   </Card>

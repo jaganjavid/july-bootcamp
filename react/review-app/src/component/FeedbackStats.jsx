@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import FeedbackContext from "../context/FeedbackContext"
 
-const FeedbackStats = ({feedback}) => {
+const FeedbackStats = () => {
+
+  const {feedback} = useContext(FeedbackContext);
+
   return (
     <div>
        <h5>Total List ({feedback.length})</h5>

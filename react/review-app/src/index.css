@@ -73,13 +73,31 @@ input:focus{
   outline: none;
 }
 
-form button{
+.btn{
   padding: 12px 30px;
   border: none;
-  background-color: rgba(38, 163, 152, 1);
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
   border-radius: 15px;
 }
 
+.btn-primary{
+  background-color: rgba(38, 163, 152, 1);
+}
+
+.btn-secondary{
+  background-color: #4326a3;
+}
+
+.btn:disabled{
+  background-color: grey;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+.error{
+  color: #e13636;
+  margin-top: 20px;
+  text-align: center;
+}

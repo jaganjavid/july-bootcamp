@@ -11,6 +11,7 @@ import FeedbackStats from "./component/FeedbackStats";
 
 const App = () => {
 
+
   const [feedback, setFeedback] = useState([
     {
       id:1,
@@ -34,9 +35,6 @@ const App = () => {
     },
   ]);
 
-  const deleteFeedback = (id) => {
-    setFeedback(feedback.filter((item) => item.id !== id));
-  }
 
 
   return (
@@ -48,7 +46,7 @@ const App = () => {
           <FeedbackForm/>
 
           <FeedbackStats feedback={feedback}/>
-          <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+          <FeedbackList/>
        </div>
 
 
