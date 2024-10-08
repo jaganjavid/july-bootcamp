@@ -1,6 +1,8 @@
 {
-    "posts": [
-      { "id": "1", "text": "a title" },
-      { "id": "2", "text": "another title" }
-    ]
+  "posts": [
+    {
+      "text": "This is my second post to add test again",
+      "id": "c7f3"
+    }
+  ]
 }
