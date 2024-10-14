@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useFetch from '../hooks/useFecth'
 import Card from '../components/Card';
-import { useParams } from 'react-router-dom';
 
 
 
-const MovieList = ({apiPath}) => {
-
-  const params = useParams();
-
-  console.log(params);
+const MovieList = ({apiPath, title}) => {
 
   const { data:movies } = useFetch(apiPath);
+
+  useEffect(() => {
+     document.title = `${title} / Cinebite`
+  }, [title]);
 
   return (
     <main className='min-h-screen'>

@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
+import BackUp from "../assets/backup.jpg";
 
 
 const Card = ({movie}) => {
 
   const {id, original_title,overview,poster_path}  = movie;
 
-  const image = `https://image.tmdb.org/t/p/w500${poster_path}`
+  const image = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : BackUp;
+
+
 
   return (
-   <Link to={`movie/${id}`}>
+   <Link to={`/movie/${id}`}>
     <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow mb-5">
       <img className="rounded-t-lg" src={image} alt="" />  
       <div className="p-5">
