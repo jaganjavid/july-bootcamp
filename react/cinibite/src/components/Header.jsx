@@ -1,9 +1,47 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-
-
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 
 const Header = () => {
+
+
+
+
+  const LogoutButton =  () => {
+
+    const [user, loading] = useAuthState(auth);
+
+    const handleLogout = async () => {
+
+      try{
+        await signOut(auth);
+        toast.success("User logged out");
+      }catch(err){
+        console.log("Error");
+      }
+ 
+    
+    }
+
+    if(loading){
+      return <p>Loading ...</p>
+     }
+
+
+
+     
+
+     return (
+       user && <button className='text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 p-1' onClick={handleLogout}>
+           Logout
+       </button>
+     )
+     
+
+  }
 
 
   const activeClass = "block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 active";
@@ -69,7 +107,7 @@ const Header = () => {
             <form onSubmit={handleSubmit}>
             <input type="text" name="search" id="search-navbar" className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
             </form>
-           <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Logout</button>
+           <LogoutButton/>
            </div>
           </div>
           <button data-collapse-toggle="navbar-search" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
